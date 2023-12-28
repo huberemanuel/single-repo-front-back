@@ -1,0 +1,16 @@
+version: '3.2'
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: huberregistry.azurecr.io/backend
+    ports:
+      - "5000:5000"
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: huberregistry.azurecr.io/frontend
+    ports:
+      - "80:80"
